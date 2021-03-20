@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <title> 회원가입 </title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+
+        <style type = "text/css">
+            body {font-family: 'Nanum Gothic', sans-serif;}
+            header {width : 100%; height : 40px;}
+            #mini_logo {float : left;}
+            div#search {width : 220px; height : 23px; border : 1.5px solid orange; border-radius : 50px; margin-top: 7px; display : inline-block;}
+            input#search_text {width : 160px; height : 20px; border : 0px; outline : none; margin-left : 10px; margin-top : 2px; float:left;}
+            button#searchbtn {border : 0px; outline : none; float : right; margin-right : 10px; background-color : white; margin-top : 3px;}
+            ul#list {margin-right : 100px; list-style : none; display: inline; float : right;}
+            li { float : left; list-style : none; margin-left : 20px; font-size : 14px;}
+
+            section {width : 100%; height : 600px; background-color: rgb(245, 245, 245); padding-top : 50px;}
+            #joinResult {width : 40%; height : 500px; background-color: white; margin-left : 30%;}
+            #joinResult button {width : 200px; height : 60px; margin-left : 80px; margin-top : 100px; border : 0px; background-color: rgb(255, 179, 37); color : white;}
+
+            footer {width : 100%; height : 300px; background-color: rgb(240, 240, 240);}
+            div#list {width : 80%; height : 50px; margin-left : 10%; border-bottom : 1px solid gray;}
+            div#list li {float : left; list-style : none; color : gray; padding-left : 30px;}
+            div#intro {width : 80%; margin-left : 10%; border-bottom : 1px solid gray; font-size : 12px;}
+            div#list li:hover {color :black;}
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <a href="../index.php"><image id = "logo" src = "../img/small_logo.png" width = 25px height = 25px></image></a> </td>
+                    
+            <div id = search>
+                <form method = "post" action = "../product/product_search.php">
+                    <input id = "search_text" type="text" name = "search">
+                    <button id = "searchbtn" type = "submit"><image src = "../img/searchbtn.jpg" width = 18px height = 18px></image></button>
+                </form>
+            </div>
+    
+            <ul id = "list">
+                <a href = "join.html"><li> 회원가입 </li></a>
+                <a href = "login.html"><li> 로그인 </li></a>
+                <li> 고객센터 </li>
+                <li> Global </li>
+            </ul> 
+        </header>
+
+        <section>
+            <div id = "joinResult">
+                <p style = "font-size : 40px; color :orange; text-align: center; padding-top : 50px; font-weight: bold;"> 가입완료 </p>
+                <p style = "font-size : 18px; text-align: center; color : rgb(48, 48, 48); padding-top : 50px;"> 가입이 완료되었습니다. 반갑습니다. </p>
+                <p style = "font-size : 18px; text-align: center; color : rgb(48, 48, 48); padding-top : 10px;"> O'market의 다양한 서비스를 즐겨보세요. </p>
+                
+                <button type = "button" onclick = "location.href='../main.php'">O'market 메인으로 </button>
+                <button type = "button" onclick = "location.href='../login.html'">로그인하기</button>
+            </div>
+        </section>
+
+
+        <footer>
+            <hr width = 100% align = "center" size = 1 color = "#D5D5D5">
+            <div id = "list">
+                <ul>
+                    <li> G마켓 소개 </li>
+                    <li> 채용 정보 </li>
+                    <li> 이용 약관 </li>
+                    <li> 개인정보처리방침 </li>
+                    <li> 청소년보호정책 </li>
+                    <li> 전자금융거래약관 </li>
+                    <li> 제휴 , 광고 </li>
+                </ul>
+            </div>
+
+            <div id = "intro">
+                <p>이베이코리아 유한책임회사 </p>
+                <p>서울시 강남구 테헤란로 152(역삼동 강남파이낸스센터) 업무진행자 : 변광윤 </p>
+                <p>사업자등록번호 : 220-81-83676  </p>
+                <p>Fax : 02-589-8842 </p>
+            </div>
+        </footer>
+    </body>
+</html>

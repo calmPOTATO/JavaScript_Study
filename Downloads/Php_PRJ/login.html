@@ -1,0 +1,140 @@
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <title>로그인</title>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.1.min.js"></script>     
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+
+        
+        <style type = "text/css">
+            body {font-family: 'Nanum Gothic', sans-serif;}
+            header {width : 100%; height : 50px;}
+            #mini_logo {float : left;}
+            div#search {width : 450px; height : 30px; border : 1.5px solid orange; border-radius : 50px; margin-top: 7px; display : inline-block; }
+            div #search_text {position : absolute; top : 20px; left : 50px; width : 380px; border : 0px; outline : 0px;}
+            div #searchbtn {position : absolute; top : 20px; left : 440px; border : 0px; outline : 0px; background-color : white; }
+
+            section {width : 60%; height : 500px; margin-left : 20%; margin-top : 50px;}
+            p#login {font-size: 20px; font-weight: bold; margin-left: 5px; color:#4b4b4b;}
+            #all {width : 100%; height : 350px}
+            #radio1 {margin-left : 160px; margin-top : 20px; margin-bottom: 35px;}
+            form {width : 50%; height : 350px; float : left; float : left;}
+            form p {margin-top : 15px; margin-left : 100px; font-size : 8px; float : left;}
+            form #loginbtn {margin-left : 15px; width : 80px; height : 80px; margin-top : 12px; background-color :  rgb(255, 181, 44); color : white; border : 0; border-radius: 10px;}
+            #user_login ul {margin-left : 35px;}
+            #user_login li {color : gray; margin-left : 30px; float : left; list-style : none;}
+            #user_login #kakaologin {width : 300px; height : 45px; margin-left : 95px; margin-top : 10px; background-color : #feeb35; border : 0;}
+
+            #promote {display : inline-block; width : 49%; height : 300px; float : right;}
+            #promote #promote1 {width : 100%; height : 40%; background: rgb(174, 174, 255); margin-top: 20px; }
+            #promote #promote2 {width : 100%; height : 40%; background: rgb(180, 255, 224); margin-top: 20px; }
+
+            footer {width : 100%; height : 300px; margin-top : 50px; background-color: rgb(238, 238, 238);}
+            div#list {width : 80%; height : 50px; margin-left : 10%; border-bottom : 1px solid gray;}
+            div#list li {float : left; list-style : none; color : gray; padding-left : 30px;}
+            div#intro {width : 80%; margin-left : 10%; border-bottom : 1px solid gray; font-size : 12px;}
+            div#list li:hover {color :black;}
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <a href="../index.php"><image id = "logo" src = "img/small_logo.png" width = 30px height = 30px></image></a>
+            <div id = search>
+                <form method = "post" action = "../product/product_search.php">
+                    <input id = "search_text" type="text" name = "search">
+                    <button id = "searchbtn" type = "submit"><image src = "img/searchbtn.jpg" width = 23px height = 23px></image></button>
+                </form>
+            </div>
+        </header>
+
+
+        <section>
+            <a href="main.php"><image id = "logo" src = "img/main_logo.png" width = 150px height = 50px></image></a>
+            <hr width = 100% size = 2 color = "orange"/>
+            <p id = "login">로그인</p>
+            <hr width = 50% align="left" size = 1 color = "#bbbbbb"/>
+
+            <div id = "all">
+                <div id = "promote">
+                    <div id = "promote1"> <p> 광고 1 </p> </div>
+                    <div id = "promote2"> <p> 광고 2 </p> </div>
+                </div>
+
+                <input id = "radio1" type = "radio" name = "chk_member" value = "user" checked = "checked"> 회원
+                <input id = "radio2" type = "radio" name = "chk_member" value = "manager">관리자
+
+                <div id = "user_login">
+                    <form method = "post" action = "user/login.php">
+                        <p id>아이디 <input type = "text" name = "u_id"></p>
+                        <p>비밀번호 <input type = "text" name = "u_pw"> </p>
+                        <button type = "submit" id = "loginbtn">로그인</button> <br>
+                        <p><input type = "checkbox" name = "rememberID" value = "true">아이디 저장</p>
+                    </form>
+
+                    <div style = "position: absolute; top : 450px;">
+                        <hr width = 100% size = 1 color = "#bbbbbb">
+                        <ul>
+                            <li> 아이디 찾기 </li>
+                            <li> 비밀번호 찾기 </li>
+                            <a href = "user/join.html"><li> 회원가입 </li></a>
+                        </ul>
+                        <button type = "button" id = "kakaologin">
+                            <image src = "img/kakaostart.jpg" id = kakaostart></image>
+                        </button>
+                    </div>
+                </div>
+
+                <div id = "manager_login">
+                    <form method = "post" action = "manager/login.php">
+                        <p id>아이디  <input type = "text" name = "u_id"> </p>
+                        <p>비밀번호 <input type = "text" name = "u_pw"> </p>
+                        <button type = "submit" id = "loginbtn">로그인</button> <br>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <hr width = 100% size = 1 color = "#2b2b2b">
+            <div id = "list">
+                <ul>
+                    <li> G마켓 소개 </li>
+                    <li> 채용 정보 </li>
+                    <li> 이용 약관 </li>
+                    <li> 개인정보처리방침 </li>
+                    <li> 청소년보호정책 </li>
+                    <li> 전자금융거래약관 </li>
+                    <li> 제휴 , 광고 </li>
+                </ul>
+            </div>
+
+            <div id = "intro">
+                <p>이베이코리아 유한책임회사 </p>
+                <p>서울시 강남구 테헤란로 152(역삼동 강남파이낸스센터) 업무진행자 : 변광윤 </p>
+                <p>사업자등록번호 : 220-81-83676  </p>
+                <p>Fax : 02-589-8842 </p>
+            </div>
+        </footer>
+    </body>
+
+    <script type = "text/javascript">
+        $(document).ready(function() {
+            $("#user_login").show();
+            $("#manager_login").hide();
+
+            $("input[name=chk_member]").change(function(){
+                var radioVal = $(this).val();
+                if(radioVal=="user") {
+                    $("#user_login").show();
+                    $("#manager_login").hide();
+                } else if(radioVal=="manager") {
+                    $("#user_login").hide();
+                    $("#manager_login").show();
+                }
+            });
+        });
+    </script>
+
+</html>
