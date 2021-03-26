@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내장객체 생성하기</title>
+
+
+    <script>
+        var tv = new Object();
+        tv.color = "white";
+        tv.price = 2000000;
+        tv.info = function() {
+            document.write("tv 색상 : " + tv.color, "<br>");
+            document.write("tv 가격 : " +  tv.price, "<br>");
+        }
+
+        var car = {
+            color: "black",
+            price: 50000000,
+            info: function() {
+                document.write("자동차 색상 : " +  this.color, "<br>");
+                document.write("자동차 가격 : " + this.price, "<br>");
+            }
+        }
+
+        document.write("<h1>tv 객체 호출하기</h1>");
+        tv.info();
+
+        document.write("<h1>자동차 객체 호출하기</h1>");
+        car.info();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
